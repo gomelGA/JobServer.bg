@@ -1,0 +1,24 @@
+<div id="right_wide_cntnr">
+    <div class="title">Моите обяви</div>
+    <div id="t_apps_top"></div>
+    <div id="t_bills">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Ref.№</th>
+                        <th>Длъжност</th>
+                        <th>Фирма</th>
+                    </tr>
+                    <tr *ngFor='let application of extractedApplications'>
+                        <td>{{application.refNumber}}</td>
+                        <td>
+                            <a routerLink="/offers/{{application._id}}">{{application.jobTitle}}</a>
+                        </td>
+                        <td>{{application.employer}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    <div id="ofr_bottom">
+    </div>
+</div>

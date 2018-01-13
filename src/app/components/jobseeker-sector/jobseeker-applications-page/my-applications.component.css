@@ -1,0 +1,78 @@
+#right_wide_cntnr {
+    margin-left: 10px;
+    line-height: 16px;
+    width: 665px;
+    float: left;
+}
+
+.title {
+    text-transform: uppercase;
+    color: #313131;
+    background-image: url('./../../../../assets/images/arrow_down.png');
+    height: 21px;
+    line-height: 21px;
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 12px;
+}
+
+#t_bills {
+    width: 665px;
+    height: 31px;
+}
+
+table, th{
+    background-color: #7d7979;
+    color: #fefefe;
+    padding: 10px;
+    text-align: center;
+}
+table {
+    width: 991px;
+}   
+
+table tr:nth-child(odd)  {
+    width: 665px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background: #d6d2d2 !important;
+    color: #000000;
+} 
+
+table tr:nth-child(even)  {
+    width: 665px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background: #e9eaeb!important;
+    color: #000000;
+} 
+
+table tr td {
+    width: 40px;
+    text-align: center;
+    padding: 5px;    
+}
+
+table tr td a {
+    color: #000000;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 17px;
+}
+
+#t_apps_mid {
+    padding: 0 3px;
+    width: 665px;
+    color: #636466;
+    text-align: center;
+}
+
+td.app_name2 {
+    width: 281px;
+    text-align: left;
+    background-image: none !important;
+    padding-left: 15px;
+}

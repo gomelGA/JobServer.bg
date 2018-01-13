@@ -1,0 +1,25 @@
+<div class="pageName">
+    <strong *ngIf="userType==='jobseekers'">Вход за КАНДИДАТИ</strong>
+    <strong *ngIf="userType!=='jobseekers'">Вход за РАБОТОДАТЕЛИ</strong>
+</div>
+<div class="container">
+    <form (ngSubmit)="login(loginForm)" [formGroup]="loginForm" id="loginF">
+        <div class="form-group">
+            <label for="username">Потребителско име:</label>
+            <input formControlName="username" type="text" class="form-control" id="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label for="password">Парола:</label>
+            <input formControlName="password" type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <div *ngIf="loginForm.status !== 'VALID'">Error</div>
+        <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">Вход</button>
+    </form>
+</div>
+<div class="regWallpaper">
+    <div>
+        <br/>
+        <a *ngIf="userType=='jobseekers'" routerLink="/{{userType}}/registration" class="btnReg">Регистрация</a>
+        <a *ngIf="userType!=='jobseekers'" routerLink="/{{userType}}/register" class="btnReg">Регистрация</a>
+    </div>
+</div>

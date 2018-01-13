@@ -1,0 +1,54 @@
+<div id="main_offer_cntnr">
+    <div id="main_offer_brd">
+        <div id="ofr_back_link">
+            <a href="javascript:window.history.go(-1);">обратно към списъка</a>
+        </div>
+
+        <div id="new_offer_logo_box"></div>
+
+        <br class="clear">
+        <div id="ofr_content">
+            <div id="ofr_position">{{extractedAdvertDetails.jobTitle}}</div>
+
+            <div class="ofr_subt">Ref.No:</div>
+            <div class="ofr_gray_bold">{{extractedAdvertDetails.refNumber}}</div>
+
+            <div class="ofr_subt">Описание</div>
+            <div id="ofr_text">{{extractedAdvertDetails.shortPreview}}</div>
+
+            <div class="ofr_subt">Описание</div>
+            <div id="ofr_main_respons">
+                <p *ngFor='let responsibility of extractedAdvertDetails.mainResponsibilities'>
+                    {{responsibility}}
+                </p>
+            </div>
+            <div class="ofr_subt">Изисквания към кандидата</div>
+            <div id="ofr_reqs">
+                <p *ngFor='let requirement of extractedAdvertDetails.requirements'>
+                    {{requirement}}
+                </p>
+            </div>
+            <div class="ofr_subt">Вид договор:</div>
+            <div class="ofr_gray m_left">{{extractedAdvertDetails.employmentType}}</div>
+            <div class="ofr_subt">Ниво в йерархията:</div>
+            <div class="ofr_gray m_left">{{extractedAdvertDetails.hierarchyLevel}}</div>
+            <div class="ofr_subt">Категория:</div>
+            <div class="ofr_gray_bold">{{extractedAdvertDetails.sector}}</div>
+            <div class="ofr_subt">Населено място:</div>
+            <div class="ofr_gray">гр.
+                <span class="BlackLink">{{extractedAdvertDetails.place}}</span>
+            </div>
+            <div class="ofr_subt">Дата на оубликуване:</div>
+            <div class="ofr_gray_bold">{{extractedAdvertDetails.formattedDate}}</div>
+            <div class="ofr_subt">Организация:</div>
+            <div class="ofr_gray_bold">{{extractedAdvertDetails.employer}}</div>
+        </div>
+    </div>
+
+    <div *ngIf='!isAdvertCreator&&!isUserEmployer' id="main_ofr_bottom">
+        <button (click)="apply()" id="new_apply" type='submit' class="mleft0">Кандидатствай</button>
+    </div>
+    <div *ngIf='isApplied' class="atten-mess">
+        Вече сте кандидатствали по тази обява!
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div (isUserLogged)="isUserLogged($event)" class='auth-header'>
+  <span class='logo'>
+    <a routerLink="/" title="Jobserver.bg">
+      <img src="./../../../../../assets/images/proxy_form.gif" alt="logo">
+    </a>
+  </span>
+  <!-- <span routerLinkActive="active" *ngIf="!isLogged" id="reg_login_box"> -->
+  <span *ngIf="!isLogged" id="reg_login_box">
+    <span>Вход и регистрация за</span>
+    <a routerLink="/employers/login">Работодатели</a>
+    <span>|</span>
+    <a routerLink="/jobseekers/login">Кандидати</a>
+  </span>
+  <span *ngIf="isLogged" id="reg_login_box">
+    <span>{{user}}</span>
+    <span>|</span>
+    <a routerLink="/logout">Изход</a>
+    <div *ngIf="isAdmin">
+      <a routerLink="/admin/allAdverts">Всички обяви</a>
+    </div>
+  </span>
+</div>

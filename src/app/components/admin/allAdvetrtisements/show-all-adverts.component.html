@@ -1,0 +1,32 @@
+<div id="right_wide_cntnr">
+    <div class="title mleft0">Търсене на обяви</div>
+    <br clear="all">
+    <div class="title left mleft0">Всички обяви за работа в България</div>
+    <br clear="all">
+    <div id="t_bills">
+        <table>
+            <tbody>
+                <tr>
+                    <th>Ref.№</th>
+                    <th>Длъжност</th>
+                    <th>Фирма</th>
+                    <th>Дата на публикуване</th>
+                </tr>
+                <tr *ngFor='let offer of offers'>
+                    <td>{{offer.refNumber}}</td>
+                    <td>
+                        <a routerLink="/offers/{{offer._id}}">{{offer.jobTitle}}</a>
+                    </td>
+                    <td>{{offer.employer}}</td>
+                    <td>{{offer._kmd.ect}}</td>
+                    <td>
+                        <a type="button" routerLink="/admin/editAdvert/{{offer._id}}" class="btnEdit">Редактирай</a>
+                    </td>
+                    <td>
+                        <button (click)="deleteAdvert(offer._id)" class="btnReg">Изтрий</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

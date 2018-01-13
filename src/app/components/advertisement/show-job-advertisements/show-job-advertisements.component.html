@@ -1,0 +1,28 @@
+<div id="right_wide_cntnr">
+    <!-- <div class="title mleft0">Търсене на обяви</div>
+    <br clear="all"> -->
+    <div class="title left mleft0">Всички обяви за работа</div>
+    <br clear="all">
+    <div id="t_bills">
+        <table>
+            <tbody>
+                <tr>
+                    <th>Ref.№</th>
+                    <th>Длъжност</th>
+                    <th>Фирма</th>
+                    <th>Дата на публикуване</th>
+                    <th>Валидна до</th>
+                </tr>
+                <tr *ngFor='let offer of offers'>
+                    <td>{{offer.refNumber}}</td>
+                    <td>
+                        <a routerLink="/offers/{{offer._id}}">{{offer.jobTitle}}</a>
+                    </td>
+                    <td>{{offer.employer}}</td>
+                    <td>{{offer._kmd.ect}}</td>
+                    <td>{{offer.validityDate}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

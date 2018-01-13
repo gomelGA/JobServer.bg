@@ -1,0 +1,65 @@
+#home {
+    margin-top: 200px;
+}
+
+.mainPanel {
+    display: inline-block;
+    width: 980px;
+    list-style: none;
+    margin: 15px 0 0;
+    padding: 0;
+}
+
+.left {
+    margin-right: 22px;
+    float: left;
+    width: 479px;
+}
+
+h1 {
+    font-size: 14px;
+    font-weight: bold;
+    background: #2b8fb0;
+    color: #FFF;
+    line-height: 23px;
+    font-size: 14px;
+    padding: 0px 10px 0px 55px;
+    line-height: 23px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+font-size: 21px;
+font-weight: bold;
+color: #5a1d55;
+margin: 20px 0px 25px;
+}
+
+.loga {
+    display: inline-block;
+    width: 479px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lastPositions {
+    list-style: none;
+}
+
+h3 {
+    margin: 35px 0 5px;
+    width: 100%;
+height: auto;
+line-height: 20px;
+margin: 0 0 5px;
+padding-bottom: 10px;
+border-bottom: 4px solid #DDD;
+font-size: 16px;
+font-weight: bold;
+color: #000;
+background: #FFF;
+text-align: center;
+}

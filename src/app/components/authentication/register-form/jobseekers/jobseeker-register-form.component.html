@@ -1,0 +1,37 @@
+<div class="pageName">
+    <strong>Регистрация на кандидат</strong>
+</div>
+<div class="container">
+    <form (ngSubmit)="registerJobseeker(registerJobseekerForm)" [formGroup]="registerJobseekerForm" id="regF">
+        <div class="form-group">
+            <label for="username">Потребителско име: *</label>
+            <input formControlName="username" type="text" class="form-control" id="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label for="email">Е-мейл: *</label>
+            <input formControlName="email" type="email" class="form-control" id="email" placeholder="E-mail">
+        </div>
+        <div class="form-group">
+            <label for="firstName">Име: *</label>
+            <input formControlName="firstName" type="text" class="form-control" id="firstName" placeholder="First name">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Фамилия: *</label>
+            <input formControlName="lastName" type="text" class="form-control" id="lastName" placeholder="Last name">
+        </div>
+        <div formGroupName="passwords">
+            <div class="form-group">
+                <label for="password">Парола: *</label>
+                <input formControlName="password" type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Повторете паролата: *</label>
+                <input formControlName="confirmPassword" type="password" class="form-control" id="confirmPassword" placeholder="Confirm password">
+            </div>
+        </div>
+        <div>
+            <div *ngIf="registerJobseekerForm.status !== 'VALID'">Error</div>
+            <input class="regBtn" [disabled]="registerJobseekerForm.invalid" name="submit" value="Регистрация" type="submit">
+        </div>
+    </form>
+</div>

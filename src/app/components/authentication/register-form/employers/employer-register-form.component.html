@@ -1,0 +1,76 @@
+<div class="pageName">
+    <strong>Регистрация на работодател</strong>
+</div>
+<div class="container">
+    <form (ngSubmit)="registerEmployer(registerEmployerForm)" [formGroup]="registerEmployerForm" id="regF">
+        <div class="user">Потребител</div>
+        <br/>
+        <div class="form-group">
+            <label for="username">Потребителско име: *</label>
+            <input formControlName="username" type="text" class="form-control" id="username" placeholder="Username">
+        </div>
+        <div formGroupName="passwords">
+            <div class="form-group">
+                <label for="password">Парола: *</label>
+                <input formControlName="password" type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Повторете паролата: *</label>
+                <input formControlName="confirmPassword" type="password" class="form-control" id="confirmPassword" placeholder="Confirm password">
+            </div>
+        </div>
+        <div class="user">Данни за фирмата/организацията</div>
+        <br/>
+        <div class="form-group">
+            <label for="entityName">Юридическо име на фирмата/организацията: *</label>
+            <input formControlName="entityName" type="text" class="form-control" id="entityName" aria-describedby="emailHelp" placeholder="Entity name">
+        </div>
+        <div class="form-group">
+            <span>
+                <strong>Сектор: *</strong>
+            </span>
+            <select formControlName="sector" id="sector">
+                <option value="12">--Изберете--</option>
+                <option value="1">ИТ-Разработка/поддръжка на софтуер/хардуер</option>
+                <option value="2">Икономика и Финанси</option>
+                <option value="3">Инженерна дейност</option>
+                <option value="4">Право, Юридически услуги</option>
+                <option value="5">Счетоводство, Одит, Финанси</option>
+                <option value="6">Производство</option>
+                <option value="7">Продажби и търговия</option>
+                <option value="8">Консултантска дейност</option>
+                <option value="9">Институции/Държавна администрация</option>
+                <option value="10">Архитектура, Строителство и Градоустройство</option>
+                <option value="11">Автомобили, Резервни части, Автосервизи, Бензиностанции</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="phone">Телефон: *</label>
+            <input formControlName="phone" type="text" class="form-control" id="phone" placeholder="Phone">
+        </div>
+        <div class="form-group">
+            <label for="email">Е-мейл: *</label>
+            <input formControlName="email" type="email" class="form-control" id="email" placeholder="E-mail">
+        </div>
+        <div class="form-group">
+            <label for="website">Уебсайт: </label>
+            <input formControlName="website" type="text" class="form-control" id="website" placeholder="Website">
+        </div>
+        <div class="form-group">
+            <label for="address">Адрес: *</label>
+            <textarea formControlName="address" type="text" class="form-control" id="address" placeholder="Address"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="logo">Лого: *</label>
+            <input formControlName="logo" type="text" class="form-control" id="logo" placeholder="Избери файл">
+            <!-- <span class="fileUpload">
+                <span>Избери файл</span>
+                <input id="uploadBtn" class="upload" name="logofile" type="file">
+            </span> -->
+        </div>
+        <div>
+            <div *ngIf="registerEmployerForm.status !== 'VALID'">Error</div>
+            <input class="regBtn" [disabled]="registerEmployerForm.invalid" name="submit" value="Регистрация" type="submit">
+        </div>
+    </form>
+</div>

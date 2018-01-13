@@ -1,0 +1,30 @@
+<div id="right_wide_cntnr">
+    <div class="title">Моите обяви</div>
+    <div id="t_apps_top"></div>
+    <div id="t_bills">
+        <table>
+            <tbody>
+                <tr>
+                    <th>Ref.№</th>
+                    <th>Длъжност</th>
+                    <th>Дата на публикуване</th>
+                </tr>
+                <tr *ngFor='let advertisement of extractedAdvertisements'>
+                    <td>{{advertisement.refNumber}}</td>
+                    <td>
+                        <a routerLink="/offers/{{advertisement._id}}">{{advertisement.jobTitle}}</a>
+                    </td>
+                    <td>{{advertisement.publishedDate}}</td>
+                    <td>
+                        <a type="button" routerLink="/employer/editAdvert/{{advertisement._id}}" class="btnEdit">Редактирай</a>
+                    </td>
+                    <td>
+                        <button (click)="deleteAdvert(advertisement._id)" class="btnReg">Изтрий</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="ofr_bottom">
+    </div>
+</div>

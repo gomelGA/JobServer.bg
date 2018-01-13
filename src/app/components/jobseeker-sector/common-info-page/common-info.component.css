@@ -1,0 +1,33 @@
+.empl_link {
+    width: 991px;
+    height: 60px;
+    color: #767575;
+    padding: 11px 15px 0 0;
+    line-height: 16px;
+    background-color: #f3f2f2;
+    margin-bottom: 10px;
+}
+
+.empl_icons {
+    float: left;
+    text-align: center;
+    width: 80px;
+    height: 50px;
+    padding-top: 5px;
+}
+
+.empl_link a {
+    color: #313131;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+#index_container {
+    float: left;
+    margin-left: 10px;
+    padding-top: 10px;
+}
